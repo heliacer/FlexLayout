@@ -48,10 +48,6 @@
   --color-popup-selected-background: var(--color-4);
   --color-edge-marker: var(--color-3);
   --color-edge-icon: #fafafa;
-  top: 8px !important;
-  bottom: 8px !important;
-  left: 8px !important;
-  right: 8px !important;
   background-color: var(--color-1);
 }
 

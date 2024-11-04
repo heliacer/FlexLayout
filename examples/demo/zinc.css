@@ -80,7 +80,7 @@ body {
 }
 
 .toolbar {
-    margin: 2px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     color: var(--zinc-50);
