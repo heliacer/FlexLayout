@@ -10,34 +10,37 @@ $zinc-800: #27272a;
 $zinc-900: #18181b;
 $zinc-950: #09090b;
 
-$color_text: $zinc-50 !default;
-$color_background: $zinc-900 !default;
-
-$color_drag1: #{$zinc-50};
-$color_drag2: #{$zinc-50};
-$color_drag1_background: transparent;
-$color_drag2_background: transparent;
-
-$font-size: medium !default;
-$font-family: Arial, sans-serif !default;
+.dark .flexlayout__layout {
+    --color-1: #{$zinc-950};
+    --color-2: #{$zinc-900};
+    --color-3: #{$zinc-800};
+    --color-4: #{$zinc-700};
+    --color-5: #{$zinc-600};
+    --color-6: #{$zinc-500};
+    --color-text: #{$zinc-50};
+    --color-background: #{$zinc-950};
+    --color-drag1: #{$zinc-50};
+    --color-drag2: #{$zinc-50};
+}
 
 .flexlayout {
     &__layout {
-        --color-text: #{$color_text};
-        --color-background: #{$color_background};
-        --color-1: #{$zinc-950};
-        --color-2: #{$zinc-900};
-        --color-3: #{$zinc-800};
-        --color-4: #{$zinc-700};
-        --color-5: #{$zinc-600};
+        --color-1: #{$zinc-50};
+        --color-2: #{$zinc-100};
+        --color-3: #{$zinc-200};
+        --color-4: #{$zinc-300};
+        --color-5: #{$zinc-400};
         --color-6: #{$zinc-500};
-        --color-drag1: #{$color_drag1};
-        --color-drag2: #{$color_drag2};
-        --color-drag1-background: #{$color_drag1_background};
-        --color-drag2-background: #{$color_drag2_background};
+        --color-text: #{$zinc-950};
+        --color-background: #{$zinc-50};
+        --color-drag1: #{$zinc-950};
+        --color-drag2: #{$zinc-950};
 
-        --font-size: #{$font_size};
-        --font-family: #{$font_family};
+        --color-drag1-background: transparent;
+        --color-drag2-background: transparent;
+
+        --font-size: medium;
+        --font-family: Arial, sans-serif;
 
         --color-overflow: var(--color-6);
         --color-icon: var(--color-6);
@@ -82,7 +85,7 @@ $font-family: Arial, sans-serif !default;
         --color-popup-selected-background: var(--color-4);
 
         --color-edge-marker: var(--color-3);
-        --color-edge-icon: #{$zinc-50};
+        --color-edge-icon: var(--color-text);
         background-color: var(--color-1);
 
     }
@@ -90,14 +93,9 @@ $font-family: Arial, sans-serif !default;
 
 }
 
-body {
-    background-color: #{$zinc-950};
-    color-scheme: dark;
-}
-
 @mixin tabset_mixin {
     &_content {
-        color: #{$zinc-50};
+        color: var(--color-text);
     }
 
     &_container {

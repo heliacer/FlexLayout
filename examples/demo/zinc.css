@@ -21,7 +21,7 @@ body {
     overflow: hidden;
     font-size: medium;
     font-family: Roboto, Arial, sans-serif;
-    background-color: var(--zinc-950);
+    background-color: var(--zinc-50);
 }
 
 #container {
@@ -32,7 +32,7 @@ body {
     position: absolute;
     display: flex;
     overflow: hidden;
-    background-color: var(--zinc-950);
+    background-color: var(--zinc-50);
 }
 
 /* Scrollbar */
@@ -49,13 +49,13 @@ body {
 
 ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background: var(--zinc-800);
+    background: var(--zinc-200);
     border: 4px solid transparent;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: var(--zinc-700);
+    background: var(--zinc-300);
 }
 
 ::-webkit-scrollbar-track {
@@ -83,15 +83,15 @@ body {
     margin-bottom: 8px;
     display: flex;
     align-items: center;
-    color: var(--zinc-50);
+    color: var(--zinc-950);
 }
 
 .toolbar select,
 .toolbar button {
     cursor: pointer;
     text-wrap: nowrap;
-    border: 1px solid var(--zinc-800);
-    background-color: var(--zinc-900);
+    border: 1px solid var(--zinc-200);
+    background-color: var(--zinc-100);
     border-radius: 5px;
 }
 
@@ -105,8 +105,8 @@ body {
 
 .drag-from {
     height: auto !important;
-    background-color: var(--zinc-50) !important;
-    color: var(--zinc-950);
+    background-color: var(--zinc-950) !important;
+    color: var(--zinc-50);
 }
 
 .contents {
@@ -117,15 +117,14 @@ body {
 
 /* simple_bundled table styling */
 .simple_table {
-    background-color: var(--zinc-950);
-    color: var(--zinc-50);
+    background-color: var(--zinc-50);
+    color: var(--zinc-950);
     border-collapse: collapse;
 }
 
 .simple_table th {
-    color: var(--zinc-50);
-    background-color: var(--zinc-900);
-    border-right: 1px solid #333;
+    color: var(--zinc-950);
+    background-color: var(--zinc-50);
     padding: 4px;
     border-bottom-color: transparent;
     text-align: left;
@@ -134,69 +133,68 @@ body {
 }
 
 .simple_table td {
-    border-right: 1px solid var(--zinc-700);
-    border-bottom: 1px solid var(--zinc-700);
+    border-right: 1px solid var(--zinc-300);
+    border-bottom: 1px solid var(--zinc-300);
     padding: 4px;
 }
 
 .simple_table tr:nth-child(even) {
-    background: var(--zinc-800);
+    background: var(--zinc-200);
 }
 
 .simple_table tr:nth-child(odd) {
-    background: var(--zinc-900);
+    background: var(--zinc-100);
 }
 
 .MuiDataGrid-container--top [role=row],
 .MuiDataGrid-container--bottom [role=row] {
-    background-color: var(--zinc-900) !important;
+    background-color: var(--zinc-100) !important;
 }
 
 * {
-    --DataGrid-rowBorderColor: var(--zinc-800) !important;
+    --DataGrid-rowBorderColor: var(--zinc-200) !important;
 }
 
 .MuiDataGrid-withBorderColor {
-    border-color: var(--zinc-800) !important;
+    border-color: var(--zinc-200) !important;
 }
 
 .MuiDataGrid-root,
 .MuiDataGrid-root p {
     border: none !important;
-    color: var(--zinc-50) !important;
+    color: var(--zinc-950) !important;
 
 }
 
 .MuiDataGrid-root button {
-    color: var(--zinc-50) !important;
+    color: var(--zinc-950) !important;
 }
 
 .MuiDataGrid-columnSeparator--resizable:hover {
-    color: var(--zinc-50) !important;
+    color: var(--zinc-950) !important;
 }
 
 p {
     color: var(--zinc-50) !important;
 }
 
-
 .ag-theme-alpine,
 .ag-theme-alpine-dark,
 .ag-theme-alpine-auto-dark {
     --ag-background-color: transparent !important;
-    --ag-foreground-color: #181d1f;
-    --ag-border-color: var(--zinc-700) !important;
+    --ag-foreground-color: var(--zinc-100);
+    --ag-border-color: var(--zinc-300) !important;
     --ag-header-background-color: transparent;
-    --ag-odd-row-background-color: var(--zinc-800);
-    --ag-checkbox-unchecked-color: var(--zinc-50);
+    --ag-odd-row-background-color: var(--zinc-200);
+    --ag-checkbox-unchecked-color: var(--zinc-950);
 }
 
 .ag-theme-alpine * {
-    color: var(--zinc-50) !important;
+    color: var(--zinc-950) !important;
 }
 
 .ag-row {
-    border-color: var(--zinc-700);
+    border-color: var(--zinc-300);
 }
 
 .token.operator,

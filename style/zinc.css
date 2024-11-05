@@ -1,14 +1,27 @@
-.flexlayout__layout {
-  --color-text: #fafafa;
-  --color-background: #18181b;
+.dark .flexlayout__layout {
   --color-1: #09090b;
   --color-2: #18181b;
   --color-3: #27272a;
   --color-4: #3f3f46;
   --color-5: #52525b;
   --color-6: #71717a;
+  --color-text: #fafafa;
+  --color-background: #09090b;
   --color-drag1: #fafafa;
   --color-drag2: #fafafa;
+}
+
+.flexlayout__layout {
+  --color-1: #fafafa;
+  --color-2: #f4f4f5;
+  --color-3: #e4e4e7;
+  --color-4: #d4d4d8;
+  --color-5: #a1a1aa;
+  --color-6: #71717a;
+  --color-text: #09090b;
+  --color-background: #fafafa;
+  --color-drag1: #09090b;
+  --color-drag2: #09090b;
   --color-drag1-background: transparent;
   --color-drag2-background: transparent;
   --font-size: medium;
@@ -47,13 +60,8 @@
   --color-popup-selected: var(--color-text);
   --color-popup-selected-background: var(--color-4);
   --color-edge-marker: var(--color-3);
-  --color-edge-icon: #fafafa;
+  --color-edge-icon: var(--color-text);
   background-color: var(--color-1);
-}
-
-body {
-  background-color: #09090b;
-  color-scheme: dark;
 }
 
 .flexlayout__layout {
@@ -217,7 +225,7 @@ body {
   flex-grow: 1;
 }
 .flexlayout__tabset_content {
-  color: #fafafa;
+  color: var(--color-text);
 }
 .flexlayout__tabset_container {
   border: 1px solid var(--color-3);

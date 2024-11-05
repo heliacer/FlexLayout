@@ -32,7 +32,8 @@
         "build:demo": "webpack",
         "lint:eslint": "eslint src/*",
         "doc": "typedoc --out typedoc --exclude \"**/examples/**/*.tsx\" --excludeInternal --disableSources --excludePrivate --excludeProtected --readme none ./src",
-        "css": "sass --no-source-map style:style "
+        "css": "sass --no-source-map style:style",
+        "css:dev": "sass --no-source-map --watch style:style"
     },
     "author": "Caplin Systems Ltd",
     "repository": "https://github.com/caplin/FlexLayout",
