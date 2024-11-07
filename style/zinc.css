@@ -34,10 +34,10 @@
   --color-tabset-divider-line: var(--color-4);
   --color-tabset-header-background: var(--color-1);
   --color-tabset-header: var(--color-text);
-  --color-border-tab-content: var(--color-background);
+  --color-border-tab-content: var(--color-2);
   --color-border-background: var(--color-2);
   --color-border-divider-line: var(--color-1);
-  --color-tab-content: var(--color-background);
+  --color-tab-content: var(--color-2);
   --color-tab-selected: var(--color-text);
   --color-tab-selected-background: var(--color-3);
   --color-tab-unselected: var(--color-6);
