@@ -45,19 +45,19 @@ $zinc-950: #09090b;
         --color-overflow: var(--color-6);
         --color-icon: var(--color-6);
 
-        --color-tabset-background: var(--color-2);
-        --color-tabset-background-selected: var(--color-2);
-        --color-tabset-background-maximized: var(--color-2);
+        --color-tabset-background: var(--color-1);
+        --color-tabset-background-selected: var(--color-1);
+        --color-tabset-background-maximized: var(--color-1);
         --color-tabset-divider-line: var(--color-4);
 
         --color-tabset-header-background: var(--color-1);
         --color-tabset-header: var(--color-text);
 
-        --color-border-tab-content: var(--color-2);
-        --color-border-background: var(--color-2);
+        --color-border-tab-content: var(--color-1);
+        --color-border-background: var(--color-1);
         --color-border-divider-line: var(--color-1);
 
-        --color-tab-content: var(--color-2);
+        --color-tab-content: var(--color-1);
         --color-tab-selected: var(--color-text);
         --color-tab-selected-background: var(--color-3);
         --color-tab-unselected: var(--color-6);
@@ -75,7 +75,7 @@ $zinc-950: #09090b;
         --color-splitter-drag: var(--color-5);
 
         --color-drag-rect-border: var(--color-3);
-        --color-drag-rect-background: var(--color-2);
+        --color-drag-rect-background: var(--color-1);
         --color-drag-rect: var(--color-text);
 
         --color-popup-border: var(--color-3);
@@ -90,7 +90,34 @@ $zinc-950: #09090b;
 
     }
 
+    &__border_sizer {
 
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+
+    &__popup_menu {
+        &_item:hover {
+            background-color: var(--color-3) !important;
+        }
+
+        &_container {
+            box-shadow: none !important;
+        }
+    }
+
+    &__drag_rect {
+        border-width: 1px !important;
+    }
+
+    &__outline_rect {
+        border-width: 1px !important;
+    }
+
+    &__tab_border {
+        border: 1px solid var(--color-3);
+        border-radius: 6px;
+    }
 }
 
 @mixin tabset_mixin {
@@ -100,23 +127,23 @@ $zinc-950: #09090b;
 
     &_container {
         border: 1px solid var(--color-3);
-        border-radius: 5px;
+        border-radius: 6px;
     }
 
     &_tabbar_inner_tab_container {
-        padding: 0 3px 0 3px !important;
+        padding: 0 4px 0 4px !important;
     }
 
     &_tabbar_inner_tab_container_top {
-        border-bottom: 3px solid transparent;
-        border-top-width: 3px !important;
+        border-bottom: 4px solid transparent;
+        border-top-width: 4px !important;
     }
 }
 
 @mixin tabset_tabbar_mixin {
     border-color: var(--color-3) !important;
     padding: 0 !important;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 @mixin tabset_header_mixin {}
@@ -130,17 +157,17 @@ $zinc-950: #09090b;
 @mixin tabset_maximized_mixin {}
 
 @mixin tab_top_mixin {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 @mixin tab_bottom_mixin {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 @mixin tab_button_mixin {
-    border-radius: 5px !important;
+    border-radius: 4px !important;
     padding: 2px 0.6em;
 }
 
@@ -158,9 +185,14 @@ $zinc-950: #09090b;
     background-color: var(--color-1);
 
     &_inner {
-        border-radius: 5px;
+        border-radius: 6px;
         border: 1px solid var(--color-3);
-        background-color: var(--color-2);
+        background-color: var(--color-1);
+
+        &_tab_container {
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+        }
     }
 
     &_top {
@@ -178,6 +210,10 @@ $zinc-950: #09090b;
     &_right {
         border-left-width: 8px !important;
     }
+
+    &_tab_contents {
+        background-color: transparent;
+    }
 }
 
 @mixin close_button_hovered_mixin {
@@ -189,8 +225,9 @@ $zinc-950: #09090b;
 }
 
 @mixin border_button_mixin {
-    border-radius: 5px;
-    padding: 2px 0.7em;
+    border-radius: 4px;
+    padding: 2.6px 10px;
+    margin: 4px 0 !important;
 }
 
 @mixin border_button_selected_mixin {}
@@ -201,11 +238,17 @@ $zinc-950: #09090b;
 
 @mixin splitter_mixin {
     background-color: var(--color-1);
+
+    &_handle {
+        background-color: var(--color-3) !important;
+    }
 }
 
 @mixin splitter_hover_mixin {
+    background-color: transparent;
+
     .flexlayout__splitter_handle {
-        background-color: var(--color-4);
+        background-color: var(--color-4) !important;
     }
 }
 
@@ -213,48 +256,16 @@ $zinc-950: #09090b;
     background-color: transparent;
 
     .flexlayout__splitter_handle {
-        background-color: var(--color-4);
+        background-color: var(--color-4) !important;
     }
 }
 
 @mixin splitter_border_mixin {}
 
 @mixin tabset_tab_divider_mixin {
-    width: 3px;
+    width: 4px;
 }
 
 @mixin border_tab_divider_mixin {}
 
 @import "_base";
-
-
-.flexlayout__tab_border {
-    border: 1px solid var(--color-3);
-    border-radius: 5px;
-}
-
-.flexlayout__border_tab_contents {
-    background-color: transparent;
-}
-
-.flexlayout__tabset-selected .flexlayout__tab_button--selected {
-    border-color: var(--color-4)
-}
-
-@media (hover: hover) {
-    .flexlayout__popup_menu_item:hover {
-        background-color: var(--color-3);
-    }
-}
-
-.flexlayout__drag_rect {
-    border-width: 1px !important;
-}
-
-.flexlayout__splitter_handle {
-    background-color: var(--color-3);
-}
-
-.flexlayout__outline_rect {
-    border-width: 1px !important;
-}
